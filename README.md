@@ -5,7 +5,7 @@ Blue gradient homepage with profile photo for Judith Martínez — Junior Data E
 ## Deploy (via GitHub web UI)
 
 1) Create a public repo named `trolobubu.github.io` (no README/.gitignore/license).
-2) Upload the contents of this folder:
+2) Contents of this folder:
    - `index.html`
    - `assets/profile.jpg`
    - `README.md`
