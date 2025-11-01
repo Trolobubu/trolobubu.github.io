@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Judith Martínez — Junior Data Engineer</title>
+  <meta name="description" content="Portfolio and professional profile of Judith Martínez — Junior Data Engineer.">
+  <style>
+    :root {
+      --bg1: #0b1533;
+      --bg2: #0e2a6b;
+      --fg: #eef2ff;
+      --muted: #c7d2fe;
+      --panel: rgba(17, 24, 39, 0.45);
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --accent: #8ab4ff;
+      --accent-strong: #a9c6ff;
+      --radius: 18px;
+      --shadow: 0 14px 36px rgba(0,0,0,0.35);
+      --maxw: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: var(--fg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.7;
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:56px 20px}
+    header{
+      display:flex;align-items:center;gap:24px;margin-bottom:28px;
+      background: var(--panel); border:1px solid var(--panel-border); border-radius: var(--radius); padding:22px; box-shadow: var(--shadow);
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:50%;overflow:hidden;flex:0 0 auto;border:3px solid var(--accent-strong);
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+      background:#0b1533;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover; display:block;}
+    h1{margin:0;font-size:2rem;line-height:1.2}
+    .subtitle{color:var(--muted);margin-top:6px}
+    section.card{
+      background: var(--panel); border:1px solid var(--panel-border); border-radius: var(--radius); padding:24px; margin:18px 0; box-shadow: var(--shadow);
+    }
+    h2{margin:0 0 10px 0;font-size:1.25rem;color:var(--accent-strong)}
+    p{margin:10px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:860px){ .grid{grid-template-columns:1fr} header{flex-direction:column;align-items:flex-start} .avatar{width:96px;height:96px} }
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .links a{
+      display:inline-block;margin:0 10px 10px 0;padding:8px 12px;border-radius:10px;border:1px solid var(--panel-border);background:rgba(255,255,255,0.06)
+    }
+    .footer{margin-top:28px;color:var(--muted);font-size:.95rem;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="avatar"><img src="assets/profile.jpg" alt="Profile photo of Judith Martínez"></div>
+      <div>
+        <h1>Judith Martínez — Junior Data Engineer</h1>
+        <div class="subtitle">Logistics & Maritime Operations Background</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <p>I am a Junior Data Engineer with a professional background in logistics, maritime operations, and management. After several years coordinating large-scale planning and process optimization, I transitioned into data engineering to bring my operational expertise into the world of data.</p>
+      <p>I am passionate about building reliable data pipelines, applying data quality principles, and turning raw operational data into meaningful business insights.</p>
+    </section>
+
+    <section class="card">
+      <h2>Technical Skills</h2>
+      <p><strong>Languages & Tools:</strong> Python · SQL · PySpark · MongoDB · FastAPI · Azure Databricks · Apache Spark · Tableau · Airflow · Delta Lake · AWS</p>
+      <p><strong>Core Competencies:</strong> Data Engineering · ETL Pipelines · Data Quality & Governance · API Development · Analytics · Process Optimization</p>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div>
+          <h3>NMBS (SNCB) Data Pipeline</h3>
+          <p>Developed an end-to-end data pipeline for NMBS/SNCB, integrating GTFS and XML transport data. Processed with PySpark and Azure Databricks, stored in MongoDB, and exposed via a FastAPI backend for analytical access.</p>
+        </div>
+        <div>
+          <h3>Spotify Data Analysis with Apache Spark</h3>
+          <p>Built a distributed data processing pipeline using Apache Spark to analyze Spotify streaming data. Performed ETL, aggregation, and visualization of listening trends and popular genres.</p>
+        </div>
+        <div>
+          <h3>Water Pump Failure Prediction</h3>
+          <p>Participated in the DrivenData "Pump It Up" competition, predicting pump functionality using scikit-learn and XGBoost. Implemented feature engineering and ensemble models to improve baseline accuracy.</p>
+        </div>
+        <div>
+          <h3>Text Mining Project</h3>
+          <p>Applied NLP techniques to classify and analyze professional mentions in social media text using HuggingFace Transformers and Pandas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Professional Background</h2>
+      <p>Before moving into data engineering, I worked in logistics and maritime planning—leading teams, optimizing KPIs, and improving forecasting accuracy. That experience taught me the importance of operational efficiency, process automation, and the power of data-driven decision-making.</p>
+    </section>
+
+    <section class="card">
+      <h2>Languages</h2>
+      <p>Spanish (Native) · English (Full Professional) · Dutch (Basic A1)</p>
+    </section>
+
+    <section class="card">
+      <h2>Links</h2>
+      <p class="links">
+        <a href="https://trolobubu.github.io/pipeline-docs" target="_blank" rel="noopener">Pipeline Documentation</a>
+        <a href="https://github.com/Trolobubu/Text-Mining" target="_blank" rel="noopener">Text‑Mining</a>
+        <a href="https://github.com/Trolobubu/Deep-Learning" target="_blank" rel="noopener">Deep‑Learning</a>
+        <a href="mailto:mtz.amoros.judith@gmail.com" target="_blank" rel="noopener">Contact</a>
+      </p>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> Judith Martínez — Hosted on GitHub Pages
+    </div>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
