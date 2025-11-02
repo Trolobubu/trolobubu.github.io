@@ -1,10 +1,10 @@
 # trolobubu.github.io
 
-Blue gradient homepage with profile photo for Judith Martínez — Junior Data Engineer.
+Judith Martínez — Junior Data Engineer.
 
 ## Deploy (via GitHub web UI)
 
-1) Create a public repo named `trolobubu.github.io` (no README/.gitignore/license).
+1) Public repo named `trolobubu.github.io` (no README/.gitignore/license).
 2) Contents of this folder:
    - `index.html`
    - `assets/profile.jpg`
