@@ -1,11 +1,526 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Judith C. Martinez | Data Engineering Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Data Engineering Portfolio of Judith C. Martinez" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+
+    .identity {
+      max-width: 550px;
+    }
+
+    .identity h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.25rem;
+    }
+
+    .identity h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .identity p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    .contact span {
+      color: var(--muted);
+    }
+
+    .tagline {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 2.2fr 1.4fr;
+      gap: 1.75rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      .contact {
+        text-align: left;
+      }
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    h3.section-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .card {
+      background: linear-gradient(135deg, var(--card), var(--bg-alt));
+      border-radius: 1rem;
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      box-shadow: 0 18px 35px rgba(15, 23, 42, 0.9);
+      margin-bottom: 0.75rem;
+    }
+
+    .card.tight {
+      padding: 0.85rem 1rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      padding: 0.18rem 0.6rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.7);
+      white-space: nowrap;
+    }
+
+    .experience-item h4,
+    .project-item h4 {
+      font-size: 0.98rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .experience-item .meta,
+    .project-item .meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-item ul,
+    .project-item ul {
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    .experience-item li,
+    .project-item li {
+      margin-bottom: 0.2rem;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .two-column-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.3rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .two-column-list span {
+      color: var(--muted);
+    }
+
+    .cert-badge {
+      font-size: 0.9rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    .cv-link span {
+      font-size: 1.1rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 <body>
-  <h1>Mi Portfolio</h1>
-  <p>Aquí va la descripción de tus proyectos.</p>
+  <div class="page">
+    <header>
+      <div class="identity">
+        <h1>Judith C. Martinez</h1>
+        <h2>Junior Data Engineer | Logistics & Maritime Operations Background</h2>
+        <p>
+          Antwerp, Belgium · Open to relocation / remote
+        </p>
+        <p class="tagline">
+          Recently graduated Data Engineer with a solid background in logistics, maritime operations,
+          and management. I enjoy building reliable data pipelines and analytics solutions that turn
+          operational data into actionable insights.
+        </p>
+      </div>
+      <div class="contact">
+        <span>Phone</span>
+        <a href="tel:+32456383729">+32 456 38 37 29</a>
+        <span>Email</span>
+        <a href="mailto:mtz.amoros.judith@gmail.com">mtz.amoros.judith@gmail.com</a>
+        <span>LinkedIn</span>
+        <a href="https://www.linkedin.com/in/judith-martinez-8b878b173" target="_blank" rel="noreferrer">
+          linkedin.com/in/judith-martinez-8b878b173
+        </a>
+        <span>GitHub</span>
+        <a href="https://github.com/Trolobubu" target="_blank" rel="noreferrer">github.com/Trolobubu</a>
+
+        <!-- Opcional: enlace al CV en PDF (pon el nombre real del archivo de tu repo) -->
+        <a class="cv-link" href="Judith_Castillo_Martinez02112025.pdf" target="_blank">
+          <span>⬇</span> Download full CV (PDF)
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Columna principal -->
+      <div>
+        <!-- Profile -->
+        <section>
+          <h3 class="section-title">Profile</h3>
+          <div class="card">
+            <p class="muted">
+              Recently graduated Data Engineer with a professional background in logistics, maritime operations,
+              and management. Experienced in coordinating complex planning processes and KPIs, now focused on
+              building data pipelines and analytics solutions. Skilled in Python, SQL, and PySpark, with hands-on
+              projects involving Azure Databricks, data quality, and visualization.
+              Passionate about transforming operational and maritime data into actionable business insights.
+            </p>
+          </div>
+        </section>
+
+        <!-- Data Engineering Projects -->
+        <section>
+          <h3 class="section-title">Data Engineering Projects</h3>
+
+          <div class="card project-item">
+            <h4>NMBS / SNCB Data Pipeline</h4>
+            <p class="meta">PySpark · Azure Databricks · MongoDB · FastAPI · GTFS & XML transport data</p>
+            <p class="muted">
+              Developed an end-to-end data pipeline for NMBS/SNCB (Belgian National Railway Company). Integrated
+              GTFS and XML transport data, processed it using PySpark and Azure Databricks, and stored results in
+              MongoDB.
+            </p>
+            <ul>
+              <li>Designed ingestion workflows for multiple transport data sources.</li>
+              <li>Implemented transformation and cleaning logic in PySpark.</li>
+              <li>Deployed a FastAPI application to serve processed datasets and enable analytical queries via API.</li>
+            </ul>
+          </div>
+
+          <div class="card project-item">
+            <h4>Spotify Data Analysis with Apache Spark</h4>
+            <p class="meta">Apache Spark · Spark SQL · DataFrames · Tableau · Matplotlib</p>
+            <p class="muted">
+              Built a data processing pipeline to analyze Spotify streaming data, focusing on listening patterns and
+              popular genres.
+            </p>
+            <ul>
+              <li>Performed ETL for track, artist, and user data using Apache Spark.</li>
+              <li>Applied aggregations and transformations to extract listening trends.</li>
+              <li>Visualized key metrics and patterns using Tableau and Matplotlib dashboards.</li>
+            </ul>
+          </div>
+
+          <div class="card project-item">
+            <h4>Text Mining & NLP on Social Media</h4>
+            <p class="meta">Python · Pandas · HuggingFace Transformers · NLP · Classification</p>
+            <p class="muted">
+              Conducted text mining and NLP on social media data to extract and classify profession-related mentions.
+            </p>
+            <ul>
+              <li>Implemented preprocessing, tokenization, and feature extraction pipelines.</li>
+              <li>Used Transformers-based models for classification tasks.</li>
+              <li>Performed exploratory data analysis and visualized linguistic patterns.</li>
+            </ul>
+          </div>
+
+          <div class="card project-item">
+            <h4>Water Pump Failure Prediction (DrivenData Challenge)</h4>
+            <p class="meta">scikit-learn · XGBoost · Feature Engineering · Classification</p>
+            <p class="muted">
+              Participated in the “Pump IT Up: Data Mining the Water Table” competition to predict water pump
+              functionality from sensor and environmental data.
+            </p>
+            <ul>
+              <li>Cleaned and engineered features from heterogeneous datasets.</li>
+              <li>Evaluated multiple models using scikit-learn and XGBoost.</li>
+              <li>Improved prediction accuracy significantly over baseline solutions.</li>
+            </ul>
+          </div>
+
+          <div class="card project-item">
+            <h4>Data Quality and Governance Framework</h4>
+            <p class="meta">Data Quality · Metadata · Automation</p>
+            <p class="muted">
+              Developed automated data quality checks and metadata tracking to improve dataset reliability and
+              auditability in analytics workflows.
+            </p>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+          <h3 class="section-title">Professional Experience</h3>
+
+          <div class="card tight experience-item">
+            <h4>Crew Discipline Planner · Allseas</h4>
+            <p class="meta">Essen, Belgium · May 2024 – Present</p>
+            <ul>
+              <li>Coordinate and plan crew schedules ensuring compliance with maritime regulations and project requirements.</li>
+              <li>Collaborate with HR and project managers to align crew availability with vessel rotations.</li>
+              <li>Apply data-driven forecasting to improve scheduling accuracy and reduce operational conflicts.</li>
+            </ul>
+          </div>
+
+          <div class="card tight experience-item">
+            <h4>Planner · Eurojob</h4>
+            <p class="meta">Amsterdam, Netherlands · Jun 2021 – Apr 2024</p>
+            <ul>
+              <li>Managed transportation and logistics planning for large-scale warehouse operations.</li>
+              <li>Specialized in supermarket distribution chains over the last two years.</li>
+              <li>Implemented KPI tracking and forecasting dashboards improving efficiency by ~15%.</li>
+              <li>Led a team to ensure process efficiency, quality control, and on-time deliveries.</li>
+            </ul>
+          </div>
+
+          <div class="card tight experience-item">
+            <h4>Account Specialist / Planner · Eurojob</h4>
+            <p class="meta">Rotterdam, Netherlands · Apr 2020 – Jun 2021</p>
+            <ul>
+              <li>Oversaw client accounts and workforce allocation for multiple logistics projects.</li>
+              <li>Supported payroll processing and HR coordination for on-site teams.</li>
+              <li>Improved client satisfaction by optimizing communication and response times.</li>
+            </ul>
+          </div>
+
+          <div class="card tight experience-item">
+            <h4>Order Picker / Transport Planner · PostNL</h4>
+            <p class="meta">Born, Netherlands · Aug 2019 – Apr 2020</p>
+            <ul>
+              <li>Coordinated internal transport operations and assisted in logistics planning.</li>
+              <li>Handled daily order picking and ensured accurate shipment preparation.</li>
+            </ul>
+          </div>
+
+          <div class="card tight experience-item">
+            <h4>Administrative Backoffice / Material Planner · CES Gestiform</h4>
+            <p class="meta">Murcia, Spain · Dec 2018 – Feb 2019</p>
+            <ul>
+              <li>Managed materials planning and administrative tasks for industrial projects.</li>
+              <li>Supported supply chain documentation and process optimization.</li>
+            </ul>
+          </div>
+
+          <div class="card tight experience-item">
+            <h4>HR Officer / Training Technician · Unavia Formación SL</h4>
+            <p class="meta">Murcia, Spain · May 2016 – Oct 2018</p>
+            <ul>
+              <li>Coordinated training programs and recruitment processes for partner companies.</li>
+              <li>Maintained employee records and ensured compliance with HR regulations.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna lateral -->
+      <aside>
+        <!-- Skills -->
+        <section>
+          <h3 class="section-title">Skills</h3>
+
+          <div class="card">
+            <h4>Data & Engineering</h4>
+            <div class="pill-row">
+              <span class="pill">Python</span>
+              <span class="pill">SQL</span>
+              <span class="pill">PySpark</span>
+              <span class="pill">Apache Spark</span>
+              <span class="pill">Azure</span>
+              <span class="pill">Azure Databricks</span>
+              <span class="pill">Delta Lake</span>
+              <span class="pill">Airflow</span>
+              <span class="pill">MongoDB / NoSQL</span>
+              <span class="pill">Tableau</span>
+              <span class="pill">Data Pipelines</span>
+              <span class="pill">ETL</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Logistics · Maritime · Management</h4>
+            <div class="pill-row">
+              <span class="pill">Crew Planning</span>
+              <span class="pill">Forecasting</span>
+              <span class="pill">KPI Management</span>
+              <span class="pill">Process Optimization</span>
+              <span class="pill">Maritime Operations</span>
+              <span class="pill">Team Leadership</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Soft Skills</h4>
+            <div class="pill-row">
+              <span class="pill">Analytical Thinking</span>
+              <span class="pill">Problem Solving</span>
+              <span class="pill">Team Collaboration</span>
+              <span class="pill">Project Management</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+          <h3 class="section-title">Education</h3>
+          <div class="card tight">
+            <div class="two-column-list">
+              <div>
+                <strong>MCA in Big Data & Business Analytics</strong><br />
+                <span>Universidad Complutense de Madrid · 2024 – 2025</span><br />
+                <span>Azure · SQL · NoSQL · MongoDB · Python · Tableau · Apache Spark · Azure Databricks · AWS</span>
+              </div>
+              <div>
+                <strong>Master’s in Security & Loss Prevention</strong><br />
+                <span>UNED · 2019 – 2020</span><br />
+                <span>Risk analysis · Data-driven prevention · Organizational resilience</span>
+              </div>
+              <div>
+                <strong>Double Bachelor’s Degree</strong><br />
+                <span>HR & Labor Relations · Social Sciences · Universidad de Murcia · 2013 – 2018</span><br />
+                <span>Management · Workforce analytics · Organizational development</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section>
+          <h3 class="section-title">Languages</h3>
+          <div class="card tight">
+            <div class="two-column-list">
+              <div><strong>Spanish</strong><br /><span>Native / Bilingual</span></div>
+              <div><strong>English</strong><br /><span>Full professional proficiency</span></div>
+              <div><strong>Dutch</strong><br /><span>Basic – A1</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+          <h3 class="section-title">Certifications</h3>
+          <div class="card tight">
+            <p class="cert-badge"><strong>SnowPro Associate: Platform</strong> — Snowflake (2025–2027)</p>
+            <p class="muted">Credential ID: 163660898</p>
+          </div>
+        </section>
+
+        <!-- Interests -->
+        <section>
+          <h3 class="section-title">Interests</h3>
+          <div class="card tight">
+            <p class="muted">
+              Maritime logistics · Data pipelines · Automation · Data visualization · Team management
+            </p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Judith C. Martinez</span>
+      <span>Built with HTML &amp; CSS · Hosted on GitHub Pages</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
