@@ -13,3 +13,4 @@ Judith Martínez — Junior Data Engineer.
    - `.github/workflows/pages.yml`
 3) Settings → Pages → Build and deployment → Source: *GitHub Actions*.
 4) Open https://trolobubu.github.io
+5) CV: https://github.com/Trolobubu/trolobubu.github.io/blob/main/Judith_Castillo_Martinez02112025.pdf
