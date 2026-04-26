@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Judith Martínez — Data Analyst</title>
   <meta name="description" content="Portfolio and professional profile of Judith Martínez — Data Analyst.">
+
   <style>
     :root {
       --bg1: #0b1533;
@@ -24,28 +25,20 @@
 
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      font-family: system-ui;
       background: linear-gradient(135deg, var(--bg1), var(--bg2));
       color: var(--fg);
       line-height: 1.7;
     }
 
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 56px 20px;
-    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 56px 20px; }
 
     header {
       display: flex;
-      align-items: center;
       gap: 24px;
-      margin-bottom: 28px;
       background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: var(--radius);
       padding: 22px;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
     }
 
     .avatar {
@@ -54,186 +47,123 @@
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid var(--accent-strong);
-      flex: 0 0 auto;
     }
 
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
+    h1 { margin: 0; font-size: 2rem; }
 
-    .subtitle {
-      color: var(--muted);
-      margin-top: 6px;
-    }
+    .subtitle { color: var(--muted); }
 
     section.card {
       background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: var(--radius);
       padding: 24px;
       margin: 18px 0;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
     }
 
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.25rem;
-      color: var(--accent-strong);
-    }
+    h2 { color: var(--accent-strong); }
 
-    h3 {
-      margin-bottom: 8px;
-    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 
-    p {
-      margin: 10px 0;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    @media (max-width: 860px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .avatar {
-        width: 96px;
-        height: 96px;
-      }
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
+    a { color: var(--accent); }
 
     .links a {
       display: inline-block;
       margin: 0 10px 10px 0;
       padding: 8px 12px;
       border-radius: 10px;
-      border: 1px solid var(--panel-border);
       background: rgba(255,255,255,0.06);
     }
 
-    .footer {
-      margin-top: 28px;
-      color: var(--muted);
-      font-size: .95rem;
-      text-align: center;
-    }
+    .footer { text-align: center; margin-top: 28px; color: var(--muted); }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <header>
-      <div class="avatar">
-        <img src="assets/profile.jpg" alt="Profile photo of Judith Martínez">
-      </div>
-      <div>
-        <h1>Judith Martínez — Data Analyst</h1>
-        <div class="subtitle">Logistics & Maritime Operations Background</div>
-      </div>
-    </header>
-
-    <section class="card">
-      <h2>About Me</h2>
-      <p>I am a Data Analyst with a professional background in logistics, maritime operations, and HR. After several years coordinating planning and optimizing processes, I transitioned into data to bring my operational expertise into data-driven environments.</p>
-      <p>I focus on transforming raw data into actionable insights, combining data analysis with technical skills in data pipelines and processing.</p>
-    </section>
-
-    <section class="card">
-      <h2>Technical Skills</h2>
-      <p><strong>Languages & Tools:</strong> Python · SQL · PySpark · Tableau · Git · MongoDB · Databricks</p>
-      <p><strong>Core Competencies:</strong> Data Analysis · Data Cleaning · Data Visualization · SQL Analytics · ETL Pipelines · Data-Driven Insights</p>
-    </section>
-
-    <section class="card">
-      <h2>Projects</h2>
-
-      <div class="grid">
-
-        <div>
-          <h3>NMBS (SNCB) Data Pipeline</h3>
-          <p>Built a data pipeline integrating GTFS and XML transport data, transforming raw data into structured datasets for analysis and insights.</p>
-          <p>Focused on data transformation, data quality, and enabling analytical use cases.</p>
-        </div>
-
-        <div>
-          <h3>Spotify Data Analysis with Apache Spark</h3>
-          <p>Analyzed Spotify streaming data using Apache Spark, identifying listening patterns, trends, and key insights through data aggregation and exploration.</p>
-        </div>
-
-        <div>
-          <h3>Water Pump Failure Prediction</h3>
-          <p>Developed a predictive model to analyze pump failures, including data preparation and feature engineering using Python.</p>
-        </div>
-
-        <div>
-          <h3>Text Mining Project</h3>
-          <p>Applied NLP techniques to analyze and classify text data, extracting insights from unstructured datasets.</p>
-        </div>
-
-        <div>
-          <a href="portfolio.html">see portfolio</a>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Professional Background</h2>
-      <p>I previously worked in logistics and maritime planning, leading teams and improving operational efficiency through data-driven decision making.</p>
-    </section>
-
-    <section class="card">
-      <h2>Languages</h2>
-      <p>Spanish (Native) · English (Professional) · Dutch (Basic)</p>
-    </section>
-
-    <section class="card">
-      <h2>Links</h2>
-      <p class="links">
-        <a href="https://trolobubu.github.io/pipeline-docs" target="_blank" rel="noopener">Pipeline Documentation</a>
-        <a href="https://github.com/Trolobubu/Text-Mining" target="_blank" rel="noopener">Text Mining</a>
-        <a href="https://github.com/Trolobubu/Business-Intelligence" target="_blank" rel="noopener">Business Intelligence</a>
-        <a href="mailto:mtz.amoros.judith@gmail.com" target="_blank" rel="noopener">Contact</a>
-      </p>
-    </section>
-
-    <div class="footer">
-      © <span id="y"></span> Judith Martínez — Hosted on GitHub Pages
-    </div>
-
+<header>
+  <div class="avatar">
+    <img src="assets/profile.jpg">
   </div>
+  <div>
+    <h1>Judith Martínez — Data Analyst</h1>
+    <div class="subtitle">Logistics & Maritime Operations Background</div>
+  </div>
+</header>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear()
-  </script>
+<section class="card">
+<h2>About Me</h2>
+<p>I am a Data Analyst with a professional background in logistics, maritime operations, and HR. After several years coordinating planning and optimizing processes, I transitioned into data to bring my operational expertise into data-driven environments.</p>
+<p>I focus on transforming raw data into actionable insights, combining analytical thinking with technical skills in data processing and ETL pipelines.</p>
+</section>
+
+<section class="card">
+<h2>Technical Skills</h2>
+<p><strong>Languages & Tools:</strong> Python · SQL · PySpark · Tableau · MongoDB · Databricks</p>
+<p><strong>Core Competencies:</strong> Data Analysis · Data Cleaning · Data Visualization · SQL Analytics · ETL Pipelines · Data-Driven Insights</p>
+</section>
+
+<section class="card">
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div>
+<h3>NMBS (SNCB) Data Pipeline</h3>
+<p>Built a data pipeline integrating GTFS and XML transport data, transforming raw data into structured datasets for analysis and insights.</p>
+<p>Focused on data transformation, data quality, and enabling analytical use cases.</p>
+</div>
+
+<div>
+<h3>Spotify Data Analysis with Apache Spark</h3>
+<p>Analyzed Spotify streaming data using Apache Spark, identifying listening patterns, trends, and key insights through data aggregation and exploration.</p>
+</div>
+
+<div>
+<h3>Water Pump Failure Prediction</h3>
+<p>Developed a predictive model to analyze pump failures, including data preparation and feature engineering using Python.</p>
+</div>
+
+<div>
+<h3>Text Mining Project</h3>
+<p>Applied NLP techniques to analyze and classify text data, extracting insights from unstructured datasets.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="card">
+<h2>Professional Background</h2>
+<p>I previously worked in logistics and maritime planning, leading teams and improving operational efficiency through data-driven decision making.</p>
+</section>
+
+<section class="card">
+<h2>Languages</h2>
+<p>Spanish (Native) · English (Professional) · Dutch (Basic)</p>
+</section>
+
+<section class="card">
+<h2>Links</h2>
+<p class="links">
+<a href="https://trolobubu.github.io/pipeline-docs">Pipeline Documentation</a>
+<a href="https://github.com/Trolobubu/Text-Mining">Text Mining</a>
+<a href="https://github.com/Trolobubu/Business-Intelligence">Business Intelligence</a>
+<a href="mailto:mtz.amoros.judith@gmail.com">Contact</a>
+</p>
+</section>
+
+<div class="footer">
+© <span id="y"></span> Judith Martínez
+</div>
+
+</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear()
+</script>
 
 </body>
 </html>
