@@ -12,7 +12,7 @@ I am a Data Analyst with a background in logistics and maritime operations, focu
 ---
 
 ## 📄 Curriculum Vitae
-[Download CV (PDF)]((https://github.com/Trolobubu/trolobubu.github.io/blob/main/CV_Judith_martinez26042026.pdf)
+[Download CV (PDF)](https://github.com/Trolobubu/trolobubu.github.io/blob/main/CV_Judith_martinez26042026.pdf)
 
 ---
 
